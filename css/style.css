@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: poppins, sans-serif;
+}
+#header{
+  background: #FFDCD8;
+  height: 100vh;
+  position: relative;
+}
+.container {
+  max-width: 110px;
+  margin: 0px auto;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px;
+  margin: auto;
+}
+.navbar a img{
+  position: relative;
+  z-index: 1;
+}
+.navbar-nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.navbar-nav li {
+  list-style: none;
+  font-weight: 400;
+  font-size: 18px;
+}
+.navbar-nav li a{
+  color: black;
+}
+.fa-caret-right{
+    font-size: 18px;
+}
+.navbar-nav li:hover a{
+    color: #FF5538;
+    font-weight: 500;
+}
+.nav-button{
+    width: 146px;
+    height: 50px;
+    border:none;
+    border-radius: 15px;
+    background: #FF5538;
+    color: white;
+    font-size: 16px;
+}
+.nav-button:hover{
+    width: 146px;
+    height: 50px;
+    border:1px solid #FF5538;
+    background: white;
+    color: #FF5538;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.navlink{
+  position: relative;
+}
+.navlink:hover .sub-navbar{
+visibility:visible;
+transition-duration: 1s;
+transition-delay: .1s;
+color: black;
+}
+.navlink:hover .fa-caret-right{
+rotate: 90deg;
+transition-duration: .5s;
+}
+.sub-navbar{
+position: absolute;
+visibility:hidden;
+}
+/* ===================Navbar Complete================= */
+
+.banner__heading{
+  margin: 120px auto 24px;
+  text-align: center;
+  padding-bottom: 2%;
+  line-height: 130%;
+  font-weight: 600;
+  font-size: 64px;
+  max-width: 770px; 
+}
+.banner__peragraph{
+  text-align: center;
+  margin: 0px auto 40px ;
+  line-height: 200%;
+  font-size: 18px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  max-width: 547px;
+}
+.banner__buttons{
+  display: flex;
+  justify-content: center;
+  gap: 24px; 
+}
+.banner__contact__btn, .banner__showcase__btn{
+  width: 146px;
+  height: 50px;
+  border:none;
+  border-radius: 15px;
+  background: #FF5538;
+  color: white;
+  font-size: 17px;
+}
+.banner__contact__btn:hover{
+  width: 146px;
+  height: 50px;
+  border:1px solid #FF5538;
+  background: white;
+  color: #FF5538;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 1px 2px 7px #FF5538;
+  transition-duration: inherit;
+}
+.banner__showcase__btn{
+  width: 146px;
+  height: 50px;
+  border:1px solid #FF5538;
+  background: white;
+  color: #FF5538;
+  font-size: 17px;
+
+}
+.banner__showcase__btn:hover{
+  width: 146px;
+  height: 50px;
+  border:none;
+  border-radius: 15px;
+  background: #FF5538;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 1px 2px 7px #FF5538;
+}
+
+
+.nav-button, .banner__showcase__btn, .banner__contact__btn:hover{
+  transition: .3s;
+  transition-timing-function: linear;
+  transform-origin: bottom;
+}
+.left-top-circle{
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-width: 300px
+}
