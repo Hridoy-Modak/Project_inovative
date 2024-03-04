@@ -39,8 +39,9 @@
 .navbar-nav li a{
   color: black;
 }
-.fa-caret-right{
+.fa-angle-up{ 
     font-size: 18px;
+    
 }
 .navbar-nav li:hover a{
     color: #FF5538;
@@ -68,20 +69,47 @@
 .navlink{
   position: relative;
 }
+.sub-navbar {
+  position: absolute;
+  visibility: hidden;
+  width: max-content;
+  height: 0px;
+  gap: 8px;
+  transform: translateY(0%);
+  transition: .1s;
+  border-radius: 5px;
+  /* border: 1px solid rgb(255, 73, 73); 
+  box-shadow: 0px 0px 5px 2px #f09383;  */
+  
+}
+  .sub-navbar li{
+    opacity: 0;
+  }
 .navlink:hover .sub-navbar{
 visibility:visible;
-transition-duration: 1s;
-transition-delay: .1s;
 color: black;
+padding: 10px;
+display: flex;
+flex-direction: column;
+height: max-content;
+transform: translateY(10%);
+
 }
-.navlink:hover .fa-caret-right{
-rotate: 90deg;
-transition-duration: .5s;
+.navlink:hover .sub-navbar li{
+  opacity: 1;
 }
-.sub-navbar{
-position: absolute;
-visibility:hidden;
+
+
+.navlink:hover .fa-angle-up{
+rotate: 180deg; 
+transition-duration: .2s;
 }
+.navlink:hover .sub-navbar{
+  background: #FFABBA; 
+  
+}
+
+
 /* ===================Navbar Complete================= */
 
 .banner__heading{
@@ -103,11 +131,13 @@ visibility:hidden;
   font-family: "Nunito", sans-serif;
   font-weight: 400;
   max-width: 547px;
+  position: sticky;
 }
 .banner__buttons{
   display: flex;
   justify-content: center;
   gap: 24px; 
+  margin-bottom: 100px;
 }
 .banner__contact__btn, .banner__showcase__btn{
   width: 146px;
@@ -220,4 +250,35 @@ visibility:hidden;
   100%{
     rotate: 360deg;
   } 
+}
+.right-snake-shape{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 400px; 
+}
+.right-cross-icon{
+  position: absolute;
+  right: 28%;
+  top: 60%;  
+}
+.poster{
+  display: flex;
+  position:absolute;
+  bottom: -50px; 
+  z-index: 2;
+  justify-content: center;
+  width: 100%;
+  gap: 10px; 
+} 
+.poster1{
+  min-width: 200px; 
+  height: 150px;
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
 }
